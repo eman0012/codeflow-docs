@@ -19,8 +19,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="/docs/about">
+            Get Started →
           </Link>
         </div>
       </div>
@@ -28,14 +28,29 @@ function HomepageHeader() {
   );
 }
 
+function HomepageIntro() {
+  return (
+    <section className="container" style={{padding: '3rem 1rem 1rem', textAlign: 'center', maxWidth: '780px', margin: '0 auto'}}>
+      <p style={{fontSize: '1.15rem', lineHeight: '1.7'}}>
+        Documentation drifts. Code changes faster than the docs that describe it,
+        and stale documentation costs users time, support teams credibility, and
+        engineering teams trust. CodeFlow watches your source code for changes
+        that contradict your Markdown documentation and flags drift before users
+        encounter it.
+      </p>
+    </section>
+  );
+}
+
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={siteConfig.title}
+      description="CodeFlow keeps Markdown documentation in sync with the source code it describes through automated drift detection.">
       <HomepageHeader />
       <main>
+        <HomepageIntro />
         <HomepageFeatures />
       </main>
     </Layout>

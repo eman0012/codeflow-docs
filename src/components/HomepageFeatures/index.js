@@ -4,32 +4,36 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Drift Detection',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        CodeFlow scans your source files and the docs that reference them.
+        When a function signature, configuration field, or API endpoint
+        changes in the code, CodeFlow flags the corresponding documentation
+        as out of sync.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Auto-Publish',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Generate static documentation sites from your Markdown sources on
+        every commit. Output formats include HTML for web hosting and PDF
+        for offline distribution.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Source Parsing',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Extract type signatures, code examples, and inline comments directly
+        from source files, so reference documentation stays accurate without
+        manual transcription.
       </>
     ),
   },
